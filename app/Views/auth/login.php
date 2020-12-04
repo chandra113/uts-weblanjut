@@ -22,7 +22,7 @@
 
 					<div class="container-login100-form-btn">
 						<button class="login100-form-btn">
-							Sign in
+							Masuk
 						</button>
 					</div>
 					
@@ -30,9 +30,11 @@
 						<span class="txt1">
 							Belum punya akun?
 						</span>
+
 						<a href="#" class="txt2">
 							Buat akun
 						</a>
+						
 					</div>
 				</form>
 			</div>

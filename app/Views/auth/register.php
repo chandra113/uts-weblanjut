@@ -1,4 +1,4 @@
-<?= $this->extend('template/reg_template'); ?>
+<?= $this->extend('template/login_template'); ?>
 
 <?= $this->section('content'); ?>
 	<div class="limiter">
@@ -31,17 +31,19 @@
 
 					<div class="container-login100-form-btn">
 						<button class="login100-form-btn">
-							Sign in
+							Daftar
 						</button>
 					</div>
 					
 					<div class="text-center w-full p-t-23">
 						<span class="txt1">
 							Sudah punya akun?
-						</span>
+                        </span>
+                        
 						<a href="#" class="txt2">
 							Masuk disini
-						</a>
+                        </a>
+                        
 					</div>
 				</form>
 			</div>
