@@ -1,3 +1,6 @@
+<?= $this->extend('template/login_template'); ?>
+
+<?= $this->section('content'); ?>
 	<div class="limiter">
 		<div class="container-login100" style="background-image: url('/login_assets/images/bg-01.jpg');">
 			<div class="wrap-login100 p-b-160 p-t-50">
@@ -36,7 +39,6 @@
 		</div>
 	</div>
 	
-	
 
 	
 	
@@ -56,3 +58,4 @@
 	<script src="/login_assets/vendor/countdowntime/countdowntime.js"></script>
 <!--===============================================================================================-->
 	<script src="/login_assets/js/main.js"></script>
+	<?= $this->endSection(); ?>	
