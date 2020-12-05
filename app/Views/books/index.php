@@ -20,7 +20,7 @@
           <?php foreach ($book as $b) : ?>
             <tr>
               <th scope="row"><?= $b['id'] ?></th>
-              <td><img src="/images/<?= $b['sampul'] ?>" class="sampul" alt="hujan_tereliye"></td>
+              <td><img src="/images/<?= $b['sampul'] ?>" class="sampul" alt="<?= $b['sampul'] ?>"></td>
               <td><?= $b['judul'] ?></td>
               <td><?= $b['pengarang'] ?></td>
               <td><?= $b['kode'] ?></td>
