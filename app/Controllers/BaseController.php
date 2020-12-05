@@ -1,4 +1,5 @@
 <?php
+
 namespace App\Controllers;
 
 /**
@@ -15,6 +16,7 @@ namespace App\Controllers;
  */
 
 use CodeIgniter\Controller;
+use App\Models\DummyBookModel;
 
 class BaseController extends Controller
 {
@@ -41,6 +43,7 @@ class BaseController extends Controller
 		//--------------------------------------------------------------------
 		// E.g.:
 		// $this->session = \Config\Services::session();
+		session();
+		$this->dummyBookModel = new DummyBookModel();
 	}
-
 }

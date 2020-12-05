@@ -2,16 +2,9 @@
 
 namespace App\Controllers;
 
-use App\Models\DummyBookModel;
 
 class Books extends BaseController
 {
-	protected $dummyBookModel;
-
-	public function __construct()
-	{
-		$this->dummyBookModel = new DummyBookModel();
-	}
 
 	public function index()
 	{
