@@ -26,7 +26,10 @@
               <td><?= $b['judul'] ?></td>
               <td><?= $b['pengarang'] ?></td>
               <td><?= $b['kode'] ?></td>
-              <td><a href="" class="btn btn-success">Detail</a></td>
+              <td>
+                <a href="/admin/edit/<?= $b['slug']; ?>" class="btn btn-warning">Edit</a>
+                <a href="<?= base_url() ?>/admin/delete/<?= $b['id'] ?>" class="btn btn-success" onclick="return confirm ('Apakah anda yakin?');">Delete</a>
+              </td>
             </tr>
           <?php endforeach; ?>
         </tbody>
