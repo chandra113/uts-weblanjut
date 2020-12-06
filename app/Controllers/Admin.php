@@ -8,14 +8,18 @@ class Admin extends BaseController
 
     public function index()
     {
-        $book = $this->dummyBookModel->findAll();
+        $bookSearch = $this->request->getVar('search');
+
+        if ($bookSearch) {
+            $book = $this->dummyBookModel->search($bookSearch);
+        } else {
+            $book = $this->dummyBookModel;
+        }
 
         $data = [
             'title' => 'SIPUS | Available Books',
-            'book' => $book
+            'book' => $book->findAll()
         ];
-
-
         return view('admin/index', $data);
     }
 
