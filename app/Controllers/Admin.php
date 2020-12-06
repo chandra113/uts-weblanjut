@@ -33,6 +33,18 @@ class Admin extends BaseController
         return view('admin/create', $data);
     }
 
+    public function edit($slug)
+    {
+
+        $data = [
+            'title' => 'SIPUS | Ubah Data Buku',
+            'validation' => \config\services::validation(),
+            'books' => $this->dummyBookModel->getBooks($slug)
+        ];
+
+        return view('admin/edit', $data);
+    }
+
     public function save()
     {
         $rules = [
@@ -62,6 +74,41 @@ class Admin extends BaseController
         }
     }
 
+    public function update($id)
+    {
+        $rules = [
+            'sampul' => 'required',
+            'judul' => 'required',
+            'pengarang' => 'required',
+            'kode' => 'required'
+        ];
+
+        if ($this->validate($rules)) {
+            //Convert 'judul' to slug
+            $slug = url_title($this->request->getVar('judul'), '-', true);
+
+            //Saves the data to the table
+            $this->dummyBookModel->save([
+                'id' => $id,
+                'sampul' => $this->request->getVar('sampul'),
+                'judul' => $this->request->getVar('judul'),
+                'slug' => $slug,
+                'pengarang' => $this->request->getVar('pengarang'),
+                'kode' => $this->request->getVar('kode')
+            ]);
+
+            return redirect()->to('/admin');
+        } else {
+            $validator = \Config\Services::validation();
+            return redirect()->to('/admin/edit/' . $this->request->getVar('slug'))->withInput()->with('validation', $validator);
+        }
+    }
+
+    public function delete($id)
+    {
+        $this->dummyBookModel->delete($id);
+        return redirect()->to('/admin');
+    }
     //--------------------------------------------------------------------
 
 }
