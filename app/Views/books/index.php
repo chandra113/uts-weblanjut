@@ -8,7 +8,7 @@
       <table class="table">
         <thead>
           <tr>
-            <th scope="col">ID</th>
+            <th scope="col">Nomor</th>
             <th scope="col">Sampul</th>
             <th scope="col">Judul</th>
             <th scope="col">Pengarang</th>
