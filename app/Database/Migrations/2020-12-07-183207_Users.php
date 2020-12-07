@@ -36,6 +36,11 @@ class Users extends Migration
 				'constraint' => 255
 			],
 
+			'role' => [
+				'type' => 'INT',
+				'constraint' => 1
+			],
+
 			'created_at' => [
 				'type' => 'DATETIME',
 				'null' => TRUE
