@@ -4,6 +4,11 @@
 <div class="container">
   <div class="row">
     <div class="col">
+      <?php if (session()->has('login') && session()->get('login') == TRUE) : ?>
+        <div class="container">
+          <h3>Welcome <?= session()->get('fullname') ?></h3>
+        </div>
+      <?php endif; ?>
       <h1 class="mt-2">Available Books</h1>
       <a href="<?= base_url('admin/create') ?>" class="btn btn-primary mb-3">Tambah Buku</a>
       <table class="table">
