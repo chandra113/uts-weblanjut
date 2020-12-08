@@ -20,9 +20,11 @@
             <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Cari</button>
         </form>
         <ul class="navbar-nav ml-auto">
-            <li class="nav-item">
-                <a class="nav-link" href="<?= base_url('/logout') ?>">Logout</a>
-            </li>
+            <?php if ((session()->has('login') && session()->get('login') == TRUE) && session()->get('role') == 1) : ?>
+                <li class="nav-item">
+                    <a class="nav-link" href="<?= base_url('/logout') ?>">Logout</a>
+                </li>
+            <?php endif; ?>
         </ul>
     </nav>
     <?= $this->renderSection('content'); ?>
