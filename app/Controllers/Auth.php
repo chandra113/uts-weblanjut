@@ -36,6 +36,7 @@ class Auth extends BaseController
 				'login' => TRUE,
 				'fullname' => $row->fullname,
 				'username' => $row->username,
+				'role' => $row->role
 			];
 
 			session()->set($data);

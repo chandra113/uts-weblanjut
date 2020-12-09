@@ -9,7 +9,6 @@
             <?= $validation->listErrors(); ?>
             <form action="<?= base_url('/admin/update/' . $books['id']); ?>" method="post">
                 <?= csrf_field(); ?>
-                <!-- <input type="hidden" name="slug" value="<?= $books['slug']; ?>"> -->
                 <div class="form-group row">
                     <label for="sampul" class="col-sm-2 col-form-label">Sampul</label>
                     <div class="col-sm-10">
@@ -34,7 +33,6 @@
                         <input type="text" class="form-control" id="kode" name="kode" autofocus value="<?= $books['kode']; ?>">
                     </div>
                 </div>
-                
                 <div class="col-sm-10">
                     <button type="submit" class="btn btn-primary">Edit Data</button>
                 </div>
