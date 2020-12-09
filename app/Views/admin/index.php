@@ -4,14 +4,10 @@
 <div class="container">
   <div class="row">
     <div class="col">
-      <?php if (session()->has('login') && session()->get('login') == TRUE) : ?>
-        <div class="container">
-          <h3>Welcome <?= session()->get('fullname') ?></h3>
-        </div>
-      <?php endif; ?>
-      <h1 class="mt-2">Available Books</h1>
+      
+      <h1 class="mt-2">Buku Yang Tersedia</h1>
       <a href="<?= base_url('admin/create') ?>" class="btn btn-primary mb-3">Tambah Buku</a>
-      <table class="table">
+      <table class="table table-hover">
         <thead>
           <tr>
             <th scope="col">Nomor</th>
@@ -33,7 +29,7 @@
               <td><?= $b['kode'] ?></td>
               <td>
                 <a href="/admin/edit/<?= $b['slug']; ?>" class="btn btn-warning">Edit</a>
-                <a href="<?= base_url() ?>/admin/delete/<?= $b['id'] ?>" class="btn btn-success" onclick="return confirm ('Apakah anda yakin?');">Delete</a>
+                <a href="<?= base_url() ?>/admin/delete/<?= $b['id'] ?>" class="btn btn-danger" onclick="return confirm ('Apakah anda yakin?');">Delete</a>
               </td>
             </tr>
           <?php endforeach; ?>

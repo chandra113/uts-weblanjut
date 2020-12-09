@@ -11,6 +11,12 @@
                 <?= csrf_field(); ?>
                 <!-- <input type="hidden" name="slug" value="<?= $books['slug']; ?>"> -->
                 <div class="form-group row">
+                    <label for="sampul" class="col-sm-2 col-form-label">Sampul</label>
+                    <div class="col-sm-10">
+                        <input type="sampul" class="form-control" id="sampul" name="sampul" autofocus value="<?= $books['sampul']; ?>">
+                    </div>
+                </div>
+                <div class="form-group row">
                     <label for="judul" class="col-sm-2 col-form-label">Judul</label>
                     <div class="col-sm-10">
                         <input type="text" class="form-control" id="judul" name="judul" autofocus value="<?= $books['judul']; ?>">
@@ -23,17 +29,12 @@
                     </div>
                 </div>
                 <div class="form-group row">
-                    <label for="kode" class="col-sm-2 col-form-label">kode</label>
+                    <label for="kode" class="col-sm-2 col-form-label">Kode</label>
                     <div class="col-sm-10">
                         <input type="text" class="form-control" id="kode" name="kode" autofocus value="<?= $books['kode']; ?>">
                     </div>
                 </div>
-                <div class="form-group row">
-                    <label for="sampul" class="col-sm-2 col-form-label">Sampul</label>
-                    <div class="col-sm-10">
-                        <input type="sampul" class="form-control" id="sampul" name="sampul" autofocus value="<?= $books['sampul']; ?>">
-                    </div>
-                </div>
+                
                 <div class="col-sm-10">
                     <button type="submit" class="btn btn-primary">Edit Data</button>
                 </div>
