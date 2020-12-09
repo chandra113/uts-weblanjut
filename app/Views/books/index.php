@@ -4,8 +4,8 @@
 <div class="container">
   <div class="row">
     <div class="col">
-      <h1 class="mt-2">Available Books</h1>
-      <table class="table">
+      <h1 class="mt-2">Buku Yang Tersedia</h1>
+      <table class="table table-hover">
         <thead>
           <tr>
             <th scope="col">Nomor</th>

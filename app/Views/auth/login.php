@@ -39,7 +39,7 @@
 						Belum punya akun?
 					</span>
 
-					<a href="<?= base_url('/register') ?>" class="txt2">
+					<a href="<?= base_url('/auth/register') ?>" class="txt2">
 						Buat akun
 					</a>
 

@@ -43,7 +43,7 @@
 						Sudah punya akun?
 					</span>
 
-					<a href="<?= base_url('/login') ?>" class="txt2">
+					<a href="<?= base_url('/auth/login') ?>" class="txt2">
 						Masuk disini
 					</a>
 
