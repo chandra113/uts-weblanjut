@@ -18,5 +18,4 @@ class UsersModel extends Model
         $log = $builder->get()->getRow();
         return $log;
     }
-    //added comments
 }
