@@ -41,7 +41,6 @@ class Auth extends BaseController
 
 			session()->set($data);
 			session()->setFlashdata('msg', 'Berhasil login');
-			return redirect()->to('/admin');
 		}
 		return redirect()->to('/login')->withInput()->with('errlog', 'Password Salah');
 	}

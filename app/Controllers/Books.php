@@ -17,7 +17,7 @@ class Books extends BaseController
 		}
 
 		$data = [
-			'title' => 'SIPUS | Available Books',
+			'title' => 'SIPUS | Home',
 			'book' => $book->findAll()
 		];
 		return view('books/index', $data);

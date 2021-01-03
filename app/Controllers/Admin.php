@@ -8,6 +8,10 @@ class Admin extends BaseController
 
     public function index()
     {
+        if (session()->get('role') == 2) {
+            return redirect()->to('/');
+        }
+
         $bookSearch = $this->request->getVar('search');
 
         if ($bookSearch) {
@@ -17,7 +21,7 @@ class Admin extends BaseController
         }
 
         $data = [
-            'title' => 'SIPUS | Available Books',
+            'title' => 'SIPUS | Halaman Admin',
             'book' => $book->findAll()
         ];
         return view('admin/index', $data);
@@ -25,6 +29,10 @@ class Admin extends BaseController
 
     public function create()
     {
+        if (session()->get('role') == 2) {
+            return redirect()->to('/');
+        }
+
         $data = [
             'title' => 'SIPUS | Tambah Buku',
             'validation' => \Config\Services::validation()
@@ -35,6 +43,9 @@ class Admin extends BaseController
 
     public function edit($slug)
     {
+        if (session()->get('role') == 2) {
+            return redirect()->to('/');
+        }
 
         $data = [
             'title' => 'SIPUS | Ubah Data Buku',
@@ -53,6 +64,10 @@ class Admin extends BaseController
             'pengarang' => 'required',
             'kode' => 'required|is_unique[books.kode]'
         ];
+
+        if (session()->get('role') == 2) {
+            return redirect()->to('/');
+        }
 
         if ($this->validate($rules)) {
             //Convert 'judul' to slug
@@ -83,6 +98,10 @@ class Admin extends BaseController
             'kode' => 'required'
         ];
 
+        if (session()->get('role') == 2) {
+            return redirect()->to('/');
+        }
+
         if ($this->validate($rules)) {
             //Convert 'judul' to slug
             $slug = url_title($this->request->getVar('judul'), '-', true);
@@ -106,6 +125,10 @@ class Admin extends BaseController
 
     public function delete($id)
     {
+        if (session()->get('role') == 2) {
+            return redirect()->to('/');
+        }
+
         $this->dummyBookModel->delete($id);
         return redirect()->to('/admin');
     }
