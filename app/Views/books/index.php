@@ -7,7 +7,7 @@
       <h1 class="mt-2">Buku Yang Tersedia</h1>
       <table class="table table-hover">
         <thead>
-          <tr>
+          <tr vertical-align="middle">
             <th scope="col">Nomor</th>
             <th scope="col">Sampul</th>
             <th scope="col">Judul</th>
@@ -19,9 +19,9 @@
         <tbody>
           <?php $i = 1; ?>
           <?php foreach ($book as $b) : ?>
-            <tr>
+            <tr vertical-align="middle">
               <th scope="row"><?= $i++ ?></th>
-              <td><img src="/images/<?= $b['sampul'] ?>" class="sampul" alt="<?= $b['sampul'] ?>"></td>
+              <td><img src="/images/<?= $b['sampul'] ?>" width="100px" alt="<?= $b['sampul'] ?>"></td>
               <td><?= $b['judul'] ?></td>
               <td><?= $b['pengarang'] ?></td>
               <td><?= $b['kode'] ?></td>

@@ -24,7 +24,7 @@ class Admin extends BaseController
             'title' => 'SIPUS | Halaman Admin',
             'book' => $book->findAll()
         ];
-        return view('admin/index', $data);
+        return view('/admin/index', $data);
     }
 
     public function create()

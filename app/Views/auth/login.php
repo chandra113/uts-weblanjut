@@ -1,51 +1,51 @@
 <?= $this->extend('template/login_template'); ?>
 
 <?= $this->section('content'); ?>
-<div class="limiter">
-	<div class="container-login100" style="background-image: url('/login_assets/images/bg-01.jpg');">
-		<div class="wrap-login100 p-b-160 p-t-50">
-			<form class="login100-form validate-form" action="<?= base_url('/auth/authLogin') ?>" method="POST">
-				<span class="login100-form-title p-b-43">
-					Login Sipus
-				</span>
+<div class="login-box">
+	<div class="login-logo">
+		<a href="<?= base_url('/admin/index2.html') ?>"><b>Admin</b>LTE</a>
+	</div>
+	<!-- /.login-logo -->
+	<div class="card">
+		<div class="card-body login-card-body">
+			<p class="login-box-msg">Sign in to start your session</p>
 
-				<div class="text-center w-full p-t-23">
-					<span class="txt2"><?= session()->getFlashdata('msg') ?></span>
+			<form action="<?= base_url('/auth/authLogin') ?>" method="post">
+				<div class="input-group mb-3">
+					<input type="text" name="username" class="form-control" placeholder="Username" value="<?= old('username') ?>" required>
+					<div class="input-group-append">
+						<div class="input-group-text">
+							<span class="fas fa-envelope"></span>
+						</div>
+					</div>
 				</div>
-
-				<div class="text-center w-full p-t-23">
-					<span class="text-danger text-center"><?= session()->getFlashdata('errlog') ?></span>
+				<div class="input-group mb-3">
+					<input type="password" name="password" class="form-control" placeholder="Password" required>
+					<div class="input-group-append">
+						<div class="input-group-text">
+							<span class="fas fa-lock"></span>
+						</div>
+					</div>
 				</div>
-
-				<div class="wrap-input100 rs1 validate-input" data-validate="Username is required">
-					<input class="input100" type="text" name="username" value="<?= old('username') ?>">
-					<span class="label-input100">Username</span>
-				</div>
-
-
-				<div class="wrap-input100 rs2 validate-input" data-validate="Password is required">
-					<input class="input100" type="password" name="password">
-					<span class="label-input100">Password</span>
-				</div>
-
-				<div class="container-login100-form-btn">
-					<button class="login100-form-btn">
-						Masuk
-					</button>
-				</div>
-
-				<div class="text-center w-full p-t-23">
-					<span class="txt1">
-						Belum punya akun?
-					</span>
-
-					<a href="<?= base_url('/auth/register') ?>" class="txt2">
-						Buat akun
-					</a>
-
+				<div class="row">
+					<button type="submit" class="btn btn-primary btn-block">Sign In</button>
 				</div>
 			</form>
+
+			<!-- /.social-auth-links -->
+			<p class="mb-0">
+				<a href="<?= base_url('/auth/register') ?>" class="text-center">Register a new membership</a>
+			</p>
 		</div>
+		<!-- /.login-card-body -->
 	</div>
 </div>
+<!-- /.login-box -->
+
+<!-- jQuery -->
+<script src="<?= base_url('/admin/plugins/jquery/jquery.min.js') ?>"></script>
+<!-- Bootstrap 4 -->
+<script src="<?= base_url('/admin/plugins/bootstrap/js/bootstrap.bundle.min.js') ?>"></script>
+<!-- AdminLTE App -->
+<script src="<?= base_url('/admin/dist/js/adminlte.min.js') ?>"></script>
 <?= $this->endSection(); ?>

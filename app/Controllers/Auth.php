@@ -29,7 +29,7 @@ class Auth extends BaseController
 		$row = $this->usersModel->getLogin($username);
 
 		if ($row == NULL) {
-			return redirect()->to('/login')->withInput()->with('errlog', 'Username Salah');
+			return redirect()->to('/auth/login')->withInput()->with('errlog', 'Username Salah');
 		}
 		if ($password == $row->password) {
 			$data = [
@@ -42,7 +42,7 @@ class Auth extends BaseController
 			session()->set($data);
 			session()->setFlashdata('msg', 'Berhasil login');
 		}
-		return redirect()->to('/login')->withInput()->with('errlog', 'Password Salah');
+		return redirect()->to('/auth/login')->withInput()->with('errlog', 'Password Salah');
 	}
 
 	public function register()
@@ -76,17 +76,17 @@ class Auth extends BaseController
 
 			session()->setFlashdata('msg', 'Akun telah terdaftar');
 
-			return redirect()->to('/login');
+			return redirect()->to('/auth/login');
 		} else {
 			$validator = \Config\Services::validation();
-			return redirect()->to('/register')->withInput()->with('validation', $validator);
+			return redirect()->to('/auth/register')->withInput()->with('validation', $validator);
 		}
 	}
 
 	public function logout()
 	{
 		session()->destroy();
-		return redirect()->to('/login');
+		return redirect()->to('/auth/login');
 	}
 
 	//tolong kasih base_url di depan login_assets kalo
