@@ -42,12 +42,12 @@
             <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
           </li>
           <li class="nav-item d-none d-sm-inline-block">
-            <a href="index3.html" class="nav-link">Home</a>
+            <a href="#" class="nav-link">Home</a>
           </li>
         <?php endif; ?>
         <?php if (session()->has('login') == FALSE) : ?>
           <li class="nav-item d-none d-sm-inline-block">
-            <a href="index3.html" class="nav-link">Login</a>
+            <a href="<?= base_url('/auth/login') ?>" class="nav-link">Login</a>
           </li>
         <?php endif; ?>
       </ul>
@@ -70,7 +70,7 @@
       <aside class="main-sidebar sidebar-dark-primary elevation-4">
         <!-- Brand Logo -->
         <a href="index3.html" class="brand-link">
-          <img src="/admin/dist/img/AdminLTELogo.png" alt="AdminLTE Logo" class="brand-image img-circle elevation-3" style="opacity: .8">
+          <img src="<?= base_url('/admin/dist/img/AdminLTELogo.png') ?>" alt="AdminLTE Logo" class="brand-image img-circle elevation-3" style="opacity: .8">
           <span class="brand-text font-weight-light">AdminLTE 3</span>
         </a>
 
