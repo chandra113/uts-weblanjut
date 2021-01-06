@@ -18,7 +18,7 @@ class Auth extends BaseController
 		$data = [
 			'title' => 'SIPUS | Login',
 		];
-		return view('auth/login', $data);
+		return view('/auth/login', $data);
 	}
 
 	public function authLogin()

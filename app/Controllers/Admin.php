@@ -24,7 +24,7 @@ class Admin extends BaseController
             'title' => 'SIPUS | Halaman Admin',
             'book' => $book->findAll()
         ];
-        return view('/admin/index', $data);
+        return view('/mimin/index', $data);
     }
 
     public function create()
@@ -38,7 +38,7 @@ class Admin extends BaseController
             'validation' => \Config\Services::validation()
         ];
 
-        return view('admin/create', $data);
+        return view('/mimin/create', $data);
     }
 
     public function edit($slug)
@@ -53,7 +53,7 @@ class Admin extends BaseController
             'books' => $this->dummyBookModel->getBooks($slug)
         ];
 
-        return view('admin/edit', $data);
+        return view('/mimin/edit', $data);
     }
 
     public function save()
@@ -82,10 +82,10 @@ class Admin extends BaseController
                 'kode' => $this->request->getVar('kode')
             ]);
 
-            return redirect()->to('/admin');
+            return redirect()->to('/mimin');
         } else {
             $validator = \Config\Services::validation();
-            return redirect()->to('/admin/create')->withInput()->with('validation', $validator);
+            return redirect()->to('/mimin/create')->withInput()->with('validation', $validator);
         }
     }
 
@@ -116,10 +116,10 @@ class Admin extends BaseController
                 'kode' => $this->request->getVar('kode')
             ]);
 
-            return redirect()->to('/admin');
+            return redirect()->to('/mimin');
         } else {
             $validator = \Config\Services::validation();
-            return redirect()->to('/admin/edit/' . $this->request->getVar('slug'))->withInput()->with('validation', $validator);
+            return redirect()->to('/mimin/edit/' . $this->request->getVar('slug'))->withInput()->with('validation', $validator);
         }
     }
 
@@ -130,7 +130,7 @@ class Admin extends BaseController
         }
 
         $this->dummyBookModel->delete($id);
-        return redirect()->to('/admin');
+        return redirect()->to('/mimin');
     }
     //--------------------------------------------------------------------
 

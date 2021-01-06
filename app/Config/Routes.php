@@ -34,9 +34,10 @@ $routes->setAutoRoute(true);
 $routes->get('/auth/login', 'Auth::login');
 $routes->get('/auth/register', 'Auth::register');
 $routes->get('/logout', 'Auth::logout');
-$routes->get('/admin/edit/(:segment)', 'Admin::edit/$1');
+$routes->get('/mimin/edit/(:segment)', 'Admin::edit/$1');
 $routes->get('/', 'Books::index');
-$routes->delete('/admin/(:num)', 'Admin::delete/$1');
+$routes->get('/mimin', 'Admin::index');
+$routes->delete('/mimin/(:num)', 'Admin::delete/$1');
 
 /**
  * --------------------------------------------------------------------

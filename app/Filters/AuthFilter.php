@@ -20,7 +20,7 @@ class AuthFilter implements FilterInterface
     public function after(RequestInterface $request, ResponseInterface $response, $arguments = null)
     {
         if (session()->get('login') == TRUE) {
-            return redirect()->to('/admin');
+            return redirect()->to('/');
         }
     }
 }
