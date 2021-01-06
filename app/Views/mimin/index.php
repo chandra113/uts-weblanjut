@@ -6,7 +6,7 @@
     <div class="col">
 
       <h1 class="mt-2">Buku Yang Tersedia</h1>
-      <a href="<?= base_url('admin/create') ?>" class="btn btn-primary mb-3">Tambah Buku</a>
+      <a href="<?= base_url('/mimin/create') ?>" class="btn btn-primary mb-3">Tambah Buku</a>
       <table class="table table-hover">
         <thead>
           <tr>
@@ -28,8 +28,8 @@
               <td><?= $b['pengarang'] ?></td>
               <td><?= $b['kode'] ?></td>
               <td>
-                <a href="/admin/edit/<?= $b['slug']; ?>" class="btn btn-warning">Edit</a>
-                <a href="<?= base_url() ?>/admin/delete/<?= $b['id'] ?>" class="btn btn-danger" onclick="return confirm ('Apakah anda yakin?');">Delete</a>
+                <a href="<?= base_url() ?>/mimin/edit/<?= $b['slug']; ?>" class="btn btn-warning">Edit</a>
+                <a href="<?= base_url() ?>/mimin/delete/<?= $b['id'] ?>" class="btn btn-danger" onclick="return confirm ('Apakah anda yakin?');">Delete</a>
               </td>
             </tr>
           <?php endforeach; ?>

@@ -3,7 +3,7 @@
 namespace App\Controllers;
 
 
-class Admin extends BaseController
+class Mimin extends BaseController
 {
 
     public function index()

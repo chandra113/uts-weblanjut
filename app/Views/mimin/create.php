@@ -5,8 +5,8 @@
     <div class="row">
         <div class="col-8">
             <h2 class="my-3">Tambah Data Buku</h2>
-            
-            <form action="<?= base_url('admin/save') ?>" method="POST">
+
+            <form action="<?= base_url('/mimin/save') ?>" method="POST">
                 <?= csrf_field(); ?>
                 <div class="form-group row">
                     <label for="sampul" class="col-sm-2 col-form-label">Sampul</label>

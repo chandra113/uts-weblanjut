@@ -7,7 +7,7 @@
         <div class="col">
             <h2 class="my-3"> Form Ubah Data </h2>
             <?= $validation->listErrors(); ?>
-            <form action="<?= base_url('/admin/update/' . $books['id']); ?>" method="post">
+            <form action="<?= base_url('/mimin/update/' . $books['id']); ?>" method="post">
                 <?= csrf_field(); ?>
                 <div class="form-group row">
                     <label for="sampul" class="col-sm-2 col-form-label">Sampul</label>

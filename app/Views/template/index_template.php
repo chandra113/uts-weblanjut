@@ -20,10 +20,6 @@
   <link rel="stylesheet" href="<?= base_url('/admin/dist/css/adminlte.min.css') ?>">
   <!-- overlayScrollbars -->
   <link rel="stylesheet" href="<?= base_url('/admin/plugins/overlayScrollbars/css/OverlayScrollbars.min.css') ?>">
-  <!-- Daterange picker -->
-  <link rel="stylesheet" href="<?= base_url('/admin/plugins/daterangepicker/daterangepicker.css') ?>">
-  <!-- summernote -->
-  <link rel="stylesheet" href="<?= base_url('/admin/plugins/summernote/summernote-bs4.css') ?>">
   <!-- Google Font: Source Sans Pro -->
   <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
 
@@ -71,7 +67,7 @@
         <!-- Brand Logo -->
         <a href="index3.html" class="brand-link">
           <img src="<?= base_url('/admin/dist/img/AdminLTELogo.png') ?>" alt="AdminLTE Logo" class="brand-image img-circle elevation-3" style="opacity: .8">
-          <span class="brand-text font-weight-light">AdminLTE 3</span>
+          <span class="brand-text font-weight-light">SIPUS</span>
         </a>
 
         <!-- Sidebar -->
@@ -140,8 +136,6 @@
   <script src="<?= base_url('/admin/plugins/daterangepicker/daterangepicker.js') ?>"></script>
   <!-- Tempusdominus Bootstrap 4 -->
   <script src="<?= base_url('/admin/plugins/tempusdominus-bootstrap-4/js/tempusdominus-bootstrap-4.min.js') ?>"></script>
-  <!-- Summernote -->
-  <script src="<?= base_url('/admin/plugins/summernote/summernote-bs4.min.js') ?>"></script>
   <!-- overlayScrollbars -->
   <script src="<?= base_url('/admin/plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js') ?>"></script>
   <!-- AdminLTE App -->
